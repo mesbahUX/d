@@ -1,5 +1,6 @@
-﻿
-const VERSION = 1;
+﻿const d = 1;
+const i = 2;
+const VERSION = d;
 
 function applyVersion() {
     document.querySelectorAll(".v1, .v2").forEach(el => {
@@ -1002,7 +1003,7 @@ async function loadPage(page , shouldScroll = true) {
 =====================================*/
 function updateHomeByScreenSize() {
 
-    const isMobile = window.innerWidth <= 600;
+    const isMobile = window.innerWidth <= 700;
 
     const currentPage =
         isMobile
@@ -1025,12 +1026,12 @@ window.addEventListener("DOMContentLoaded", () => {
     updateHomeByScreenSize();
 
     let previousIsMobile =
-        window.innerWidth <= 600;
+        window.innerWidth <= 700;
 
     window.addEventListener("resize", () => {
 
         const currentIsMobile =
-            window.innerWidth <= 600;
+            window.innerWidth <= 700;
 
         // فقط وقتی از مرز 600 عبور کردیم
         if (currentIsMobile !== previousIsMobile) {
